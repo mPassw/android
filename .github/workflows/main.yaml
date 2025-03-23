@@ -2,6 +2,10 @@ name: Flutter Android Build
 
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release Tag (e.g. v1.0.0)'
+        required: true
 
 jobs:
   build:
@@ -29,8 +33,11 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release
+        id: create_release
+        uses: ncipollo/release-action@v1
         with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          tag: ${{ github.event.inputs.tag }}
+          name: "Release ${{ github.event.inputs.tag }}"
+          body: "Release of app-release.apk"
+          artifacts: build/app/outputs/flutter-apk/app-release.apk
