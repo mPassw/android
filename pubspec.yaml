@@ -1,7 +1,7 @@
 name: mpass
-description: "A new Flutter project."
+description: "mPass is a password manager that allows you to store your passwords securely and manage them with ease."
 publish_to: "none"
-version: 0.1.0
+version: 0.0.1
 
 environment:
     sdk: ^3.6.0
