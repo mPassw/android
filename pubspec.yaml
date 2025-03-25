@@ -1,7 +1,7 @@
 name: mpass
 description: "mPass is a password manager that allows you to store your passwords securely and manage them with ease."
 publish_to: "none"
-version: 0.0.1
+version: 0.0.2
 
 environment:
     sdk: ^3.6.0
