@@ -70,20 +70,6 @@ class _ServerUrlPageState extends State<ServerUrlPage> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton.icon(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Login()));
-                    },
-                    label: const Text("Offline Mode"),
-                    icon: const Icon(Icons.arrow_forward),
-                    iconAlignment: IconAlignment.end,
-                  ),
-                ],
-              ),
               Expanded(
                 child: Align(
                   // Use Align for positioning
